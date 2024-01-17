@@ -24,7 +24,16 @@ template<typename T> struct IsContainer {
 	enum { value = sizeof(test<T>(0)) == sizeof(Yes) };
 };
 
-template<typename T> typename std::enable_if<IsContainer<T>::value, void>::type log(const T& t) {
+template<bool condition, typename T> struct EnableIF {
+	typedef T type;
+};
+
+template<typename T> struct EnableIF<false, T> {
+	typedef void type;
+};
+
+template<typename T>
+typename EnableIF<IsContainer<T>::value, void>::type log(const T& t) {
 	typedef typename T::const_iterator Iter;
 	for(Iter it = t.begin(); it < t.end(); it++)
 		std::cout << *it << std::endl;
@@ -34,9 +43,9 @@ void log(const int& t) {
 	std::cout << t << std::endl;
 }
 
-std::vector<int> python_call()
+std::vector<char> python_call()
 {
-	return std::vector<int>{1,2,3,4,5,6,7,8,9};
+	return std::vector<char>{'a','b','c','d'};
 	//return 9845;
 }
 
