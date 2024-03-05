@@ -1,0 +1,31 @@
+*** Modern C++ Course Syllabus ***
+
+Who is elligible to participate:
+1- Those who know STL very well
+2- Those who have worked with class rule-of-three and rule-of-five
+3- Those who are fluent in searching advance stuff in C++ like lambda expression, and auto-declval cencept
+
+[1]: template and generic programing
+[2]: template metaprograming simple examples
+[3]: template metaprograming advanced examples
+[4]: SFINAE
+[5]: CRTP
+[6]: Migration towards C++20 ('require' and 'concept' keywords)
+[7]: C++20/23 advanced examples
+[8]: C++20/23 coroutines. In single threaded application, 'coroutines' are a solution for asynchronous processing that you otherwise don't have access to. Another usage is when heavily threaded appliccation in which memory and file descriptor savings is required.
+
+*** Bonuses ***
+[9]: lvalue/rvalue -> copy and move semantics
+[10]: Combining rvalue and variadic rvalue with template metaprograming
+
+*** Details ***
+[1]: What can be done to define a generic functionality in C++ and how template instantiation works
+[2]: How to cheat compiler to do stuff at compile-time with types and integral values
+[3]: Implementation of generic lists (aka. tuples) and solving Matrix problem
+[4]: How to overcome different types returning and concept of SFINAE
+[5]: What can be brought to usage by polymorphism and how to implement static polymorphism by CRTP
+[6]: Replacing SFINAE with 'constexpr if' statements
+[7]: Replacing SFINAE with 'require' and 'concept' syntactic sugar
+[8]: Implementation of coroutine in C and see how it can be done in C++20 {https://www.vishalchovatiya.com/coroutine-in-c-language/} {https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html}
+[9]: How to code with different reference types and distiguish between copying and moving
+[10]: Template metaprograming with rvalue referencing for code improvement, std::forward explanation, and talking about reference collapsing rules {https://stackoverflow.com/a/8527373/5821185}

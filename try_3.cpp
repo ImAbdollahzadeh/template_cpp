@@ -2,7 +2,7 @@
 
 template<typename T> struct IsContainer {
 	template<typename C> static constexpr bool has_size( decltype(&C::size) ) { return true;  }
-	template<typename C> static constexpr bool has_size(...)                  { return false; }
+	template<typename C> static constexpr bool has_size( ... )                { return false; }
 	                     static constexpr bool value = has_size<T>(nullptr);
 };
 
